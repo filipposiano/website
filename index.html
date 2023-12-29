@@ -3,67 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
-
-        nav {
-            width: 200px;
-            background-color: #eee;
-            padding: 15px;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-        }
-
-        nav a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            margin-bottom: 5px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-        }
-
-        main {
-            margin-left: 220px;
-            padding: 20px;
-        }
-    </style>
+    <title>Sito con Nav Bar Laterale</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>My Website</h1>
-    </header>
+<div class="container">
+    <div class="navbar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰ Toggle Sidebar</button>
+    </div>
+    <div class="content">
+        <h1>Contenuto Principale</h1>
+        <p>Benvenuto nel mio sito con nav bar laterale.</p>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">✕ Close Sidebar</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
 
-    <nav>
-        <a href="page1.html">Page 1</a>
-        <a href="page2.html">Page 2</a>
-        <a href="page3.html">Page 3</a>
-    </nav>
-
-    <main>
-        <h2>Welcome to My Website!</h2>
-        <p>This is the home page.</p>
-    </main>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
