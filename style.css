@@ -1,8 +1,65 @@
-:root {
-    background-color:rgb(15, 15, 15);
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
+.container {
+    display: flex;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
     color: white;
+    text-align: center;
+    width: 100px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.sidebar {
+    width: 0;
+    height: 100%;
+    background-color: #111;
+    overflow-x: hidden;
+    position: fixed;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar .toggle-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.navbar .toggle-btn:focus {
+    outline: none;
 }
