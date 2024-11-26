@@ -1,38 +1,91 @@
 /* Stili di base per il corpo e il margine */
+html {
+    height: 100%;
+    font-family: Helvetica;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    height: 1000vh;
 }
 
-/* Stili per la barra di navigazione */
 .navbar {
-    overflow: hidden;
-    background-color: rgba(37, 123, 220, 0.5);
-    backdrop-filter: blur;
-    width: 100%; /* La navbar occupa il 100% della larghezza della pagina */
-    position: fixed; /* Fissa la navbar in cima alla pagina */
-    top: 0;
-    left: 0; /* Assicurati che inizi dal bordo sinistro */
-    z-index: 1000; /* Assicurati che la navbar sia sopra altri elementi */
+    position: sticky;
+    top: 20px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    opacity: 1;
 }
 
-/* Stili per i link nella navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+.nome-principale {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: left;
+}
+
+.lista-nav-ul {
+    display: flex;
+    list-style-type: none;
+    text-align: right;
+    padding: 0px;
+    margin: 0 auto;
     text-decoration: none;
 }
 
-/* Stili per i link al passaggio del mouse */
-.navbar a:hover {
-    color: black;
+
+.lista-nav {
+    display: flex;
+    list-style-type: none;
+    text-align: right;
+    padding: 0px;
+    margin: 0 auto;
+    text-decoration: none;
 }
 
-/* Stili per il contenuto principale della pagina */
-.content {
-    padding: 8px;
-    margin-top: 0px; /* Aggiungi un margine superiore per evitare che il contenuto si sovrapponga alla navbar */
+.link-nav {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 8px;
+
+}
+
+.link-nav:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+.main  {
+    background-color: royalblue;
+    display: flex;
+
+}
+
+#main-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.near-img-content {
+    justify-content: left;
+    align-items: left;
+    margin: 20px;
 }
